@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+input{}
+
+</style>
+</head>
+<body>
+
+<button class="btn">按钮1</button>
+<button class="btn">按钮2</button>
+<button class="btn">按钮3</button>
+<input type="text" name="user">
+<div id="box">一个块、。。</div>
+
+
+<script>
+// 获取元素
+// var oBox = document.getElementById('box');//返回单个元素
+// var aIpt = document.getElementsByTagName('input');//返回的是元素集合
+
+// IE 6 7 8不支持
+// var aBtn = document.getElementsByClassName('btn');//返回的是元素集合(伪数组，类数组对象)
+
+// console.log(oBox);
+// console.log(aBtn);
+
+// aBtn.style.color = 'blue';
+// aBtn[1].style.color = 'red';
+
+
+// IE 6 7 8不支持
+var oBox = document.querySelector('#box');//返回单个元素(返回匹配到的第一个元素)
+var aBtn = document.querySelectorAll('.btn');//返回的是元素集合
+// var aBtn = document.querySelector('.btn');//返回的是元素集合
+var aIpt = document.querySelectorAll('input');//返回的是元素集合
+console.log(oBox);
+console.log(aBtn);
+console.log(aIpt);
+aIpt[0].style.borderColor = 'red';
+
+
+</script>
+</body>
+</html>
